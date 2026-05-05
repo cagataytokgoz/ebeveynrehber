@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Okul Öncesi Güvenli İçerik Rehberi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400&family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FFF8F0;
+    --cream-deep: #FCEFD9;
+    --peach: #FFD4C2;
+    --peach-deep: #FFB59A;
+    --mint: #C8E8D5;
+    --mint-deep: #9BCEAE;
+    --lavender: #E0D4F2;
+    --lavender-deep: #BFA9E0;
+    --yellow: #FFE9A8;
+    --yellow-deep: #F5D169;
+    --sky: #C7E4F2;
+    --sky-deep: #95C7DE;
+    --rose: #F7C8D0;
+    --rose-deep: #E89AA8;
+    --coral: #FF8C66;
+    --coral-deep: #E5694A;
+    --ink: #3D2E2E;
+    --ink-soft: #6B5650;
+    --brown: #5C3A21;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.7;
+    font-size: 17px;
+    background-image: 
+      radial-gradient(circle at 10% 20%, rgba(255, 212, 194, 0.25) 0%, transparent 40%),
+      radial-gradient(circle at 90% 80%, rgba(200, 232, 213, 0.25) 0%, transparent 40%),
+      radial-gradient(circle at 50% 50%, rgba(224, 212, 242, 0.15) 0%, transparent 60%);
+    min-height: 100vh;
+  }
+
+  .wrap {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  /* HEADER */
+  header {
+    text-align: center;
+    padding: 60px 20px 80px;
+    position: relative;
+  }
+
+  .deco-shape {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 0;
+    opacity: 0.55;
+  }
+  .deco-1 { width: 90px; height: 90px; background: var(--peach); top: 30px; left: 5%; animation: float 6s ease-in-out infinite; }
+  .deco-2 { width: 70px; height: 70px; background: var(--mint); top: 100px; right: 8%; animation: float 7s ease-in-out infinite 0.5s; }
+  .deco-3 { width: 50px; height: 50px; background: var(--lavender); bottom: 20px; left: 15%; animation: float 5s ease-in-out infinite 1s; }
+  .deco-4 { width: 40px; height: 40px; background: var(--yellow); top: 60px; right: 20%; animation: float 8s ease-in-out infinite 0.3s; }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(8deg); }
+  }
+
+  .label {
+    display: inline-block;
+    padding: 8px 20px;
+    background: var(--cream-deep);
+    color: var(--brown);
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 2;
+  }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(34px, 6vw, 58px);
+    line-height: 1.1;
+    color: var(--brown);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 28px;
+    position: relative;
+    z-index: 2;
+  }
+
+  h1 .accent {
+    font-style: italic;
+    color: var(--coral);
+    font-weight: 600;
+  }
+
+  .author-block {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    padding: 18px 32px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(92, 58, 33, 0.08);
+    position: relative;
+    z-index: 2;
+  }
+
+  .author-name {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--ink);
+  }
+
+  .author-school {
+    font-size: 14px;
+    color: var(--ink-soft);
+    font-weight: 500;
+  }
+
+  .author-divider {
+    width: 30px;
+    height: 2px;
+    background: var(--coral);
+    border-radius: 2px;
+    margin: 4px 0;
+  }
+
+  /* SECTIONS */
+  section {
+    margin-bottom: 64px;
+  }
+
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(26px, 4vw, 36px);
+    color: var(--brown);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .section-title::before {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 36px;
+    background: var(--coral);
+    border-radius: 4px;
+  }
+
+  .intro-text {
+    background: white;
+    border-radius: 24px;
+    padding: 36px 40px;
+    box-shadow: 0 4px 20px rgba(92, 58, 33, 0.06);
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+  .intro-text p {
+    margin-bottom: 16px;
+  }
+  .intro-text p:last-child { margin-bottom: 0; }
+
+  /* ALERT BOXES */
+  .alert {
+    border-radius: 24px;
+    padding: 28px 32px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin: 30px 0;
+  }
+
+  .alert-warning {
+    background: linear-gradient(135deg, var(--peach) 0%, var(--rose) 100%);
+  }
+
+  .alert-info {
+    background: linear-gradient(135deg, var(--mint) 0%, var(--sky) 100%);
+  }
+
+  .alert-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    background: white;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+  }
+
+  .alert-content h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 20px;
+    color: var(--brown);
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+
+  .alert-content p {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* AGE CARDS - YAŞ SÜRELERİ */
+  .age-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+  }
+
+  .age-card {
+    background: white;
+    border-radius: 24px;
+    padding: 28px 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 16px rgba(92, 58, 33, 0.06);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .age-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+  }
+
+  .age-card:nth-child(1)::before { background: var(--peach-deep); }
+  .age-card:nth-child(2)::before { background: var(--mint-deep); }
+  .age-card:nth-child(3)::before { background: var(--lavender-deep); }
+  .age-card:nth-child(4)::before { background: var(--yellow-deep); }
+
+  .age-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(92, 58, 33, 0.12);
+  }
+
+  .age-num {
+    font-family: 'Fraunces', serif;
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--brown);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .age-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 14px;
+  }
+
+  .age-time {
+    background: var(--cream-deep);
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-weight: 700;
+    color: var(--brown);
+    font-size: 15px;
+  }
+
+  .age-note {
+    background: var(--cream-deep);
+    border-radius: 16px;
+    padding: 18px 24px;
+    margin-bottom: 16px;
+    color: var(--ink);
+    font-weight: 500;
+    border-left: 4px solid var(--coral);
+  }
+
+  /* IMPACT CARDS */
+  .impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+  }
+
+  .impact-card {
+    border-radius: 24px;
+    padding: 28px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .impact-positive {
+    background: linear-gradient(135deg, var(--mint) 0%, #DAF0E2 100%);
+  }
+
+  .impact-negative {
+    background: linear-gradient(135deg, var(--peach) 0%, #FFE4D5 100%);
+  }
+
+  .impact-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(92, 58, 33, 0.1);
+  }
+
+  .impact-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+
+  .impact-icon {
+    width: 44px;
+    height: 44px;
+    background: white;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+
+  .impact-card h3 {
+    font-family: 'Fraunces', serif;
+    color: var(--brown);
+    font-size: 19px;
+    font-weight: 700;
+    flex: 1;
+  }
+
+  .impact-toggle {
+    width: 28px;
+    height: 28px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    color: var(--brown);
+    font-weight: 700;
+  }
+
+  .impact-card.open .impact-toggle {
+    transform: rotate(45deg);
+  }
+
+  .impact-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, margin-top 0.4s ease;
+  }
+
+  .impact-card.open .impact-body {
+    max-height: 800px;
+    margin-top: 16px;
+  }
+
+  .impact-body p {
+    color: var(--ink);
+    line-height: 1.75;
+    margin-bottom: 12px;
+  }
+  .impact-body p:last-child { margin-bottom: 0; }
+
+  /* APPROACH CARDS - DİĞER BÖLÜMÜ */
+  .approach-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .approach-item {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(92, 58, 33, 0.05);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .approach-item:hover {
+    box-shadow: 0 8px 22px rgba(92, 58, 33, 0.1);
+  }
+
+  .approach-header {
+    padding: 22px 26px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    user-select: none;
+  }
+
+  .approach-marker {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fraunces', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--brown);
+  }
+
+  .approach-item:nth-child(1) .approach-marker { background: var(--peach); }
+  .approach-item:nth-child(2) .approach-marker { background: var(--mint); }
+  .approach-item:nth-child(3) .approach-marker { background: var(--lavender); }
+  .approach-item:nth-child(4) .approach-marker { background: var(--yellow); }
+
+  .approach-title {
+    font-family: 'Fraunces', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--brown);
+    flex: 1;
+  }
+
+  .approach-arrow {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background: var(--cream-deep);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    color: var(--brown);
+  }
+
+  .approach-item.open .approach-arrow {
+    transform: rotate(180deg);
+  }
+
+  .approach-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .approach-item.open .approach-body {
+    max-height: 600px;
+  }
+
+  .approach-content {
+    padding: 0 26px 24px 88px;
+    color: var(--ink);
+    line-height: 1.75;
+  }
+
+  /* TIPS - İPUÇLARI */
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 14px;
+  }
+
+  .tip-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(92, 58, 33, 0.05);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .tip-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(92, 58, 33, 0.1);
+  }
+
+  .tip-header {
+    padding: 20px 22px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .tip-num {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--brown);
+  }
+
+  .tip-card:nth-child(11n+1) .tip-num { background: var(--peach); }
+  .tip-card:nth-child(11n+2) .tip-num { background: var(--mint); }
+  .tip-card:nth-child(11n+3) .tip-num { background: var(--lavender); }
+  .tip-card:nth-child(11n+4) .tip-num { background: var(--yellow); }
+  .tip-card:nth-child(11n+5) .tip-num { background: var(--sky); }
+  .tip-card:nth-child(11n+6) .tip-num { background: var(--rose); }
+  .tip-card:nth-child(11n+7) .tip-num { background: var(--peach); }
+  .tip-card:nth-child(11n+8) .tip-num { background: var(--mint); }
+  .tip-card:nth-child(11n+9) .tip-num { background: var(--lavender); }
+  .tip-card:nth-child(11n+10) .tip-num { background: var(--yellow); }
+  .tip-card:nth-child(11n+11) .tip-num { background: var(--sky); }
+
+  .tip-title {
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--brown);
+    flex: 1;
+    line-height: 1.3;
+  }
+
+  .tip-card.open .tip-arrow {
+    transform: rotate(180deg);
+  }
+
+  .tip-arrow {
+    width: 26px;
+    height: 26px;
+    background: var(--cream-deep);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    font-size: 12px;
+    color: var(--brown);
+  }
+
+  .tip-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .tip-card.open .tip-body {
+    max-height: 500px;
+  }
+
+  .tip-content {
+    padding: 0 22px 20px 22px;
+    color: var(--ink);
+    line-height: 1.7;
+    font-size: 15px;
+  }
+
+  /* PEGI */
+  .pegi-box {
+    background: linear-gradient(135deg, var(--lavender) 0%, var(--sky) 100%);
+    border-radius: 24px;
+    padding: 32px 36px;
+  }
+
+  .pegi-box h3 {
+    font-family: 'Fraunces', serif;
+    color: var(--brown);
+    font-size: 22px;
+    margin-bottom: 14px;
+  }
+
+  .pegi-box p {
+    color: var(--ink);
+    line-height: 1.75;
+    margin-bottom: 12px;
+  }
+
+  .pegi-tag {
+    display: inline-block;
+    background: white;
+    color: var(--brown);
+    padding: 6px 14px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-family: 'Fraunces', serif;
+  }
+
+  /* CONTENT REVIEWS */
+  .content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 14px;
+  }
+
+  .content-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(92, 58, 33, 0.05);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .content-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(92, 58, 33, 0.1);
+  }
+
+  .content-header {
+    padding: 22px 24px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .content-emblem {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    color: var(--brown);
+    font-size: 18px;
+  }
+
+  .content-card:nth-child(16n+1) .content-emblem { background: var(--peach); }
+  .content-card:nth-child(16n+2) .content-emblem { background: var(--mint); }
+  .content-card:nth-child(16n+3) .content-emblem { background: var(--lavender); }
+  .content-card:nth-child(16n+4) .content-emblem { background: var(--yellow); }
+  .content-card:nth-child(16n+5) .content-emblem { background: var(--sky); }
+  .content-card:nth-child(16n+6) .content-emblem { background: var(--rose); }
+  .content-card:nth-child(16n+7) .content-emblem { background: var(--peach); }
+  .content-card:nth-child(16n+8) .content-emblem { background: var(--mint); }
+  .content-card:nth-child(16n+9) .content-emblem { background: var(--lavender); }
+  .content-card:nth-child(16n+10) .content-emblem { background: var(--yellow); }
+  .content-card:nth-child(16n+11) .content-emblem { background: var(--sky); }
+  .content-card:nth-child(16n+12) .content-emblem { background: var(--rose); }
+  .content-card:nth-child(16n+13) .content-emblem { background: var(--peach); }
+  .content-card:nth-child(16n+14) .content-emblem { background: var(--mint); }
+  .content-card:nth-child(16n+15) .content-emblem { background: var(--lavender); }
+  .content-card:nth-child(16n+16) .content-emblem { background: var(--yellow); }
+
+  .content-title {
+    font-family: 'Fraunces', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--brown);
+    flex: 1;
+    line-height: 1.3;
+  }
+
+  .content-arrow {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    background: var(--cream-deep);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    font-size: 12px;
+    color: var(--brown);
+  }
+
+  .content-card.open .content-arrow {
+    transform: rotate(180deg);
+  }
+
+  .content-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+
+  .content-card.open .content-body {
+    max-height: 800px;
+  }
+
+  .content-text {
+    padding: 0 24px 22px 24px;
+    color: var(--ink);
+    line-height: 1.75;
+    font-size: 15px;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 60px 20px 40px;
+    color: var(--ink-soft);
+    font-size: 14px;
+  }
+
+  footer .heart {
+    color: var(--coral);
+    font-size: 18px;
+    display: inline-block;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+  }
+
+  /* HERO ILLUSTRATION */
+  .hero-illu {
+    width: 100%;
+    max-width: 380px;
+    margin: 36px auto 0;
+    display: block;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* SECTION ILLUSTRATIONS */
+  .section-illu {
+    width: 100%;
+    max-width: 240px;
+    margin: 24px auto;
+    display: block;
+    opacity: 0.95;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    .wrap { padding: 20px 16px 60px; }
+    header { padding: 30px 10px 50px; }
+    .intro-text { padding: 28px 24px; }
+    .approach-content { padding: 0 22px 22px 22px; }
+    .deco-shape { display: none; }
+    .alert { padding: 22px 24px; flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- HEADER -->
+  <header>
+    <div class="deco-shape deco-1"></div>
+    <div class="deco-shape deco-2"></div>
+    <div class="deco-shape deco-3"></div>
+    <div class="deco-shape deco-4"></div>
+
+    <span class="label">Aileler İçin Rehber</span>
+    <h1>Okul Öncesi <br><span class="accent">Güvenli İçerik</span> Rehberi</h1>
+
+    <!-- Hero illustration: child with parent reading -->
+    <svg class="hero-illu" viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg">
+      <!-- Soft background blob -->
+      <ellipse cx="200" cy="240" rx="170" ry="20" fill="#FFD4C2" opacity="0.5"/>
+      
+      <!-- Tree -->
+      <circle cx="60" cy="120" r="40" fill="#C8E8D5"/>
+      <rect x="55" y="155" width="10" height="40" fill="#8B6F47"/>
+      <circle cx="48" cy="115" r="12" fill="#9BCEAE"/>
+      <circle cx="72" cy="110" r="14" fill="#9BCEAE"/>
+      
+      <!-- Sun -->
+      <circle cx="340" cy="60" r="28" fill="#FFE9A8"/>
+      <circle cx="340" cy="60" r="20" fill="#F5D169" opacity="0.6"/>
+      
+      <!-- Cloud -->
+      <ellipse cx="280" cy="50" rx="30" ry="14" fill="white"/>
+      <ellipse cx="295" cy="45" rx="20" ry="12" fill="white"/>
+      
+      <!-- Parent (sitting) -->
+      <ellipse cx="160" cy="220" rx="55" ry="18" fill="#BFA9E0" opacity="0.4"/>
+      <!-- Body -->
+      <path d="M 130 170 Q 130 145 160 145 Q 190 145 190 170 L 195 215 Q 160 220 125 215 Z" fill="#E89AA8"/>
+      <!-- Head -->
+      <circle cx="160" cy="135" r="22" fill="#FFD4C2"/>
+      <!-- Hair -->
+      <path d="M 138 128 Q 138 110 160 110 Q 182 110 182 128 Q 178 122 160 122 Q 142 122 138 128" fill="#5C3A21"/>
+      <!-- Eyes -->
+      <circle cx="153" cy="135" r="1.8" fill="#3D2E2E"/>
+      <circle cx="167" cy="135" r="1.8" fill="#3D2E2E"/>
+      <!-- Smile -->
+      <path d="M 154 142 Q 160 146 166 142" stroke="#3D2E2E" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <!-- Cheek -->
+      <circle cx="148" cy="140" r="3" fill="#FFB59A" opacity="0.7"/>
+      <circle cx="172" cy="140" r="3" fill="#FFB59A" opacity="0.7"/>
+      <!-- Arm holding child -->
+      <path d="M 190 175 Q 215 175 225 195" stroke="#E89AA8" stroke-width="14" fill="none" stroke-linecap="round"/>
+      
+      <!-- Child -->
+      <!-- Body -->
+      <path d="M 215 195 Q 215 180 235 180 Q 255 180 255 195 L 258 220 Q 235 222 212 220 Z" fill="#9BCEAE"/>
+      <!-- Head -->
+      <circle cx="235" cy="172" r="16" fill="#FFD4C2"/>
+      <!-- Hair -->
+      <path d="M 220 168 Q 220 156 235 156 Q 250 156 250 168" fill="#8B6F47"/>
+      <circle cx="225" cy="160" r="3" fill="#8B6F47"/>
+      <!-- Eyes -->
+      <circle cx="230" cy="172" r="1.5" fill="#3D2E2E"/>
+      <circle cx="240" cy="172" r="1.5" fill="#3D2E2E"/>
+      <!-- Smile -->
+      <path d="M 231 178 Q 235 181 239 178" stroke="#3D2E2E" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+      <!-- Cheeks -->
+      <circle cx="226" cy="176" r="2.2" fill="#FFB59A" opacity="0.7"/>
+      <circle cx="244" cy="176" r="2.2" fill="#FFB59A" opacity="0.7"/>
+      
+      <!-- Book -->
+      <rect x="195" y="200" width="60" height="35" rx="3" fill="#FFE9A8" stroke="#5C3A21" stroke-width="1.5"/>
+      <line x1="225" y1="200" x2="225" y2="235" stroke="#5C3A21" stroke-width="1"/>
+      <line x1="200" y1="208" x2="222" y2="208" stroke="#3D2E2E" stroke-width="0.6" opacity="0.5"/>
+      <line x1="200" y1="214" x2="220" y2="214" stroke="#3D2E2E" stroke-width="0.6" opacity="0.5"/>
+      <line x1="200" y1="220" x2="222" y2="220" stroke="#3D2E2E" stroke-width="0.6" opacity="0.5"/>
+      <line x1="228" y1="208" x2="250" y2="208" stroke="#3D2E2E" stroke-width="0.6" opacity="0.5"/>
+      <line x1="228" y1="214" x2="248" y2="214" stroke="#3D2E2E" stroke-width="0.6" opacity="0.5"/>
+      <line x1="228" y1="220" x2="250" y2="220" stroke="#3D2E2E" stroke-width="0.6" opacity="0.5"/>
+      
+      <!-- Floating hearts and stars -->
+      <text x="100" y="80" font-size="20" fill="#FF8C66">♥</text>
+      <text x="320" y="130" font-size="16" fill="#F5D169">★</text>
+      <text x="280" y="110" font-size="14" fill="#9BCEAE">✦</text>
+    </svg>
+
+    <div class="author-block" style="margin-top: 36px;">
+      <span class="author-name">Fatih Selek</span>
+      <span class="author-divider"></span>
+      <span class="author-school">Ali Işıkhan Anaokulu</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section>
+    <h2 class="section-title">Sevgili Aileler</h2>
+    <div class="intro-text">
+      <p>Teknoloji, günlük yaşamın vazgeçilmez bir parçası hâline geldiği için çocuklarımız da dijital dünyayla artık çok erken yaşlarda tanışıyor. Bu süreçte, okul öncesi dönem çocuklarının teknolojiyle kurduğu ilişki büyük ölçüde yetişkinlerin rehberliğine bağlıdır. Çünkü bu yaşlar dikkat, öz denetim, dil becerileri ve sosyal etkileşim gibi alanların hızla geliştiği; çevreden gelen her uyaranın beyin gelişimini doğrudan etkilediği kritik bir dönemdir.</p>
+      <p>Çocuğunuzun teknolojiyi nasıl ve ne amaçla kullanacağına dair tutumunuz; onun ilerleyen yıllarda oluşturacağı dijital alışkanlıkların temelini belirler. Bu nedenle ekran süresi yalnızca bir "süre yönetimi" konusu değildir; aynı zamanda çocuğunuzun bilişsel, sosyal ve duygusal gelişimini destekleyecek bir kullanım kültürü oluşturma sürecidir.</p>
+    </div>
+  </section>
+
+  <!-- ETKİ -->
+  <section>
+    <h2 class="section-title">Ekranın Etkisi</h2>
+    <div class="impact-grid">
+      <div class="impact-card impact-positive" onclick="toggle(this)">
+        <div class="impact-header">
+          <div class="impact-icon">🌱</div>
+          <h3>Doğru Kullanımın Katkısı</h3>
+          <div class="impact-toggle">+</div>
+        </div>
+        <div class="impact-body">
+          <p>Ekran doğru şekilde kullanıldığında öğrenmeyi destekleyen bir araç olabilir. Yaşa uygun, öğretici ve etkileşimli içerikler çocukların merak duygusunu besleyebilir, yeni kavramları keşfetmesine katkı sağlayabilir ve bazı temel becerilerin pekiştirilmesine yardımcı olabilir.</p>
+          <p>Özellikle ebeveyn eşliğinde yapılan kısa süreli kullanım, çocuğun ekrandaki bilgiyi gerçek yaşantılarıyla ilişkilendirmesine ve daha anlamlı öğrenmesine imkân tanır.</p>
+        </div>
+      </div>
+
+      <div class="impact-card impact-negative" onclick="toggle(this)">
+        <div class="impact-header">
+          <div class="impact-icon">⚠️</div>
+          <h3>Pasif Maruziyetin Riski</h3>
+          <div class="impact-toggle">+</div>
+        </div>
+        <div class="impact-body">
+          <p>Ekrana pasif ve uzun süreli maruz kalmak, okul öncesi dönemde bir dizi gelişimsel riski beraberinde getirebilir. Hızla değişen görüntülere alışmak, çocuğun dikkatini daha yavaş ve doğal uyaranlara vermesini zorlaştırabilir.</p>
+          <p>Gerçek etkileşim yerine ekran karşısında geçirilen zaman dil gelişimini sınırlayabilir. Çünkü çocuk bu süre boyunca soru sorma, sohbet etme ve karşılıklı iletişim kurma fırsatlarını kaybeder.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="alert alert-info" style="margin-top: 24px;">
+      <div class="alert-icon">💡</div>
+      <div class="alert-content">
+        <h3>Unutmayın</h3>
+        <p>Okul öncesi dönemde ekran kullanımının gelişim üzerindeki etkisini belirleyen temel unsur yalnızca süresi değil, kullanımın niteliğidir. Çocuğun ekranı hangi amaçla ve hangi içeriklerle kullandığı, bu kullanımın yetişkin rehberliğinde gerçekleşip gerçekleşmediği; ekran deneyiminin gelişim üzerindeki etkisini doğrudan belirler. Okul öncesi yaş grubunda çocuklar, gerçek ile kurgu arasındaki farkı tam olarak ayırt edemedikleri için dijital ortamlarda gördüklerini kolayca taklit edebilir. Bu nedenle şiddet içeren, korkutucu ya da olumsuz örnek oluşturabilecek içeriklerden uzak durulması gerekir.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EKRAN SÜRELERİ -->
+  <section>
+    <h2 class="section-title">Yaşa Göre Ekran Süreleri</h2>
+    <div class="age-note">
+      <strong>3-6 yaş aralığı:</strong> Ekran süresi kısa tutulmalı, gerekirse gün içinde bölünerek kullanılmalı ve mutlaka bir yetişkin rehberliğinde gerçekleşmelidir.
+    </div>
+    <div class="age-grid">
+      <div class="age-card">
+        <div class="age-num">3</div>
+        <div class="age-label">Yaş</div>
+        <div class="age-time">En fazla 30 dakika</div>
+      </div>
+      <div class="age-card">
+        <div class="age-num">4</div>
+        <div class="age-label">Yaş</div>
+        <div class="age-time">En fazla 40 dakika</div>
+      </div>
+      <div class="age-card">
+        <div class="age-num">5</div>
+        <div class="age-label">Yaş</div>
+        <div class="age-time">En fazla 50 dakika</div>
+      </div>
+      <div class="age-card">
+        <div class="age-num">6</div>
+        <div class="age-label">Yaş</div>
+        <div class="age-time">En fazla 60 dakika</div>
+      </div>
+    </div>
+
+    <div class="alert alert-warning" style="margin-top: 28px;">
+      <div class="alert-icon">👁️</div>
+      <div class="alert-content">
+        <h3>Önemli Not</h3>
+        <p>Çocuk, dijital içeriklerle yalnız bırakılmamalıdır. Çocuğun ekranla geçirdiği her an mutlaka bir yetişkin gözetiminde gerçekleşmelidir.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DİĞER - YAKLAŞIMLAR -->
+  <section>
+    <h2 class="section-title">Dikkat Edilmesi Gerekenler</h2>
+    <div class="approach-list">
+
+      <div class="approach-item" onclick="toggle(this)">
+        <div class="approach-header">
+          <div class="approach-marker">01</div>
+          <div class="approach-title">Ekranı Oyalama ya da Sakinleştirme Aracı Olarak Kullanmayın</div>
+          <div class="approach-arrow">▼</div>
+        </div>
+        <div class="approach-body">
+          <div class="approach-content">
+            Çocuğunuza yemek yerken, öfkelendiğinde, dışarıda beklerken ya da kalabalık ortamlarda sessiz kalması için ekran vermek kısa vadede işe yarıyor gibi görünebilir. Ancak bu durum uzun vadede çocuğun öz denetim becerilerini zayıflatabilir, duygularını yönetmesini güçleştirebilir ve sağlıksız teknoloji kullanım alışkanlıkları geliştirmesine yol açabilir.
+          </div>
+        </div>
+      </div>
+
+      <div class="approach-item" onclick="toggle(this)">
+        <div class="approach-header">
+          <div class="approach-marker">02</div>
+          <div class="approach-title">Ekranı Ödül veya Ceza Aracı Olarak Kullanmayın</div>
+          <div class="approach-arrow">▼</div>
+        </div>
+        <div class="approach-body">
+          <div class="approach-content">
+            Bu durum teknolojiyi çocuğunuzun gözünde olduğundan daha cazip hâle getirebilir ve sağlıklı kullanım alışkanlıkları geliştirmesini engelleyebilir.
+          </div>
+        </div>
+      </div>
+
+      <div class="approach-item" onclick="toggle(this)">
+        <div class="approach-header">
+          <div class="approach-marker">03</div>
+          <div class="approach-title">Olumlu Rol Model Olun</div>
+          <div class="approach-arrow">▼</div>
+        </div>
+        <div class="approach-body">
+          <div class="approach-content">
+            Çocuğunuz, teknolojiyi sizin nasıl kullandığınızı gözlemleyerek öğrenir. Ekran başında geçirdiğiniz süre, telefonu nasıl kullandığınız veya televizyonu ne zaman açtığınız, çocuğunuz için güçlü bir model oluşturur.
+          </div>
+        </div>
+      </div>
+
+      <div class="approach-item" onclick="toggle(this)">
+        <div class="approach-header">
+          <div class="approach-marker">04</div>
+          <div class="approach-title">Alternatif Etkinlikleri Öne Çıkarın</div>
+          <div class="approach-arrow">▼</div>
+        </div>
+        <div class="approach-body">
+          <div class="approach-content">
+            Gerçek oyun, açık hava etkinlikleri, spor, müzik ve resim gibi etkinlikler çocuğunuzun ilgisini doğal biçimde yönlendirir. Bu tür etkinlikler dikkat süresini destekler, sosyal becerilerini güçlendirir ve ekrandan bağımsız keyif almayı öğretir. Ayrıca ilgi ve yeteneklerini keşfetmesine yardımcı olacak hobiler zamanını daha verimli kullanmasını sağlar.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- İPUÇLARI -->
+  <section>
+    <h2 class="section-title">Pratik İpuçları</h2>
+
+    <!-- Section illustration -->
+    <svg class="section-illu" viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="120" cy="125" rx="100" ry="8" fill="#9BCEAE" opacity="0.4"/>
+      <!-- Clock -->
+      <circle cx="60" cy="60" r="35" fill="#FFE9A8" stroke="#5C3A21" stroke-width="2"/>
+      <line x1="60" y1="60" x2="60" y2="38" stroke="#5C3A21" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="60" y1="60" x2="76" y2="60" stroke="#5C3A21" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="60" cy="60" r="3" fill="#5C3A21"/>
+      <text x="60" y="35" text-anchor="middle" font-size="6" fill="#5C3A21">12</text>
+      <text x="83" y="63" text-anchor="middle" font-size="6" fill="#5C3A21">3</text>
+      <text x="60" y="89" text-anchor="middle" font-size="6" fill="#5C3A21">6</text>
+      <text x="37" y="63" text-anchor="middle" font-size="6" fill="#5C3A21">9</text>
+      <!-- Star -->
+      <text x="115" y="50" font-size="22" fill="#F5D169">★</text>
+      <!-- Checklist -->
+      <rect x="150" y="35" width="70" height="65" rx="6" fill="white" stroke="#5C3A21" stroke-width="1.5"/>
+      <circle cx="160" cy="50" r="3" fill="#9BCEAE"/>
+      <line x1="167" y1="50" x2="210" y2="50" stroke="#3D2E2E" stroke-width="1.5"/>
+      <circle cx="160" cy="65" r="3" fill="#E89AA8"/>
+      <line x1="167" y1="65" x2="200" y2="65" stroke="#3D2E2E" stroke-width="1.5"/>
+      <circle cx="160" cy="80" r="3" fill="#BFA9E0"/>
+      <line x1="167" y1="80" x2="208" y2="80" stroke="#3D2E2E" stroke-width="1.5"/>
+      <circle cx="160" cy="95" r="3" fill="#95C7DE"/>
+      <line x1="167" y1="95" x2="195" y2="95" stroke="#3D2E2E" stroke-width="1.5"/>
+    </svg>
+
+    <div class="tips-grid">
+
+      <div class="tip-card" onclick="toggle(this)">
+        <div class="tip-header">
+          <div class="tip-num">01</div>
+          <div class="tip-title">Günün Planlı Olmasını Sağlayın</div>
+          <div class="tip-arrow">▼</div>
+        </div>
+        <div class="tip-body">
+          <div class="tip-content">Yemek, oyun ve uyku gibi temel rutinlerin düzenli olması, teknolojiye ayrılan zamanın bu düzenin içerisine kontrollü şekilde yerleştirilebilmesini sağlar.</div>
+        </div>
+      </div>
+
+      <div class="tip-card" onclick="toggle(this)">
+        <div class="tip-header">
+          <div class="tip-num">02</div>
+          <div class="tip-title">Süre Sınırı Belirleyin</div>
+          <div class="tip-arrow">▼</div>
+        </div>
+        <div class="tip-body">
+          <div class="tip-content">Teknolojiye ayrılan zamanın belirli saatlerle sınırlandırılması, çocuğun teknolojik aracı kullanmaya ne zaman başlayıp ne zaman bırakacağını öğretir. Çocuğun öz denetim kazanmasına katkı sağlar.</div>
+        </div>
+      </div>
+
+      <div class="tip-card" onclick="toggle(this)">
+        <div class="tip-header">
+          <div class="tip-num">03</div>
+          <div class="tip-title">İçeriklerin Takibine Özen Gösterin</div>
+          <div class="tip-arrow">▼</div>
+        </div>
+        <div class="tip-body">
+          <div class="tip-content">Çocuğunuzun izlediği ya da oynadığı içeriklerin yaşına ve gelişim düzeyine uygun olmasına dikkat edin.</div>
+        </div>
+      </div>
+
+      <div class="tip-card" onclick="toggle(this)">
+        <div class="tip-header">
+          <div class="tip-num">04</div>
+          <div class="tip-title">Ekran Karşısındayken Yanında Bulunun</div>
+          <div class="tip-arrow">▼</div>
+        </div>
+        <div class="tip-body">
+          <div class="tip-content">Okul öncesi dönemde çocukların teknolojik cihazları ebeveyn gözetiminde kullanması önerilir. Yanında oturmak, izlediklerini konuşmak ve sorular sormak pasif izlemeyi etkileşimli öğrenmeye dönüştürür.</div>
+        </div>
+      </div>
+
+      <div class="tip-card" onclick="toggle(this)">
+        <div class="tip-header">
+          <div class="tip-num">05</div>
+          <div class="tip-title">Arka Planda Ekranı Açık Bırakmayın</div>
+          <div class="tip-arrow">▼</div>
+        </div>
+        <div class="tip-body">
+          <div class="tip-content">Sosyal medya kullanımınızı sınırlayın. Çocuk izlemiyor gibi görünse de ortamda açık kalan uygun olmayan içerikler çocuğunuzu etkileyebilir.</div>
+        </div>
+      </div>
+
+      <div class="tip-card" onclick="toggle(this)">
+        <div class="tip-header">
+          <div class="tip-num">06</div>
+          <div class="tip-title">Cihazları Ortak Yaşam Alanında Tutun</div>
+          <div class="tip-arrow">▼</div>
+        </div>
+        <div class="tip-body">
+          <div class="tip-content">Tablet, telefon ve bilgisayar gibi dijital araçların salon gibi ortak alanlarda bulunması; çocuğunuzun ekranı sizin rehberliğinizde, güvenli ve kontrollü şekilde kullanmasını sağlar.</div>
+        </div>
+      </div>
+
+      <div class="tip-card" onclick="toggle(this)">
+        <div class="tip-header">
+          <div class="tip-num">07</div>
+          <div class="tip-title">Ekransız Alanlar Belirleyin</div>
+          <div class="tip-arrow">▼</div>
+        </div>
+        <div class="tip-body">
+          <div class="tip-content">Yatak odası, yemek masası ve aile sohbetlerinin olduğu alanlarda ekran bulundurmamaya özen gösterin.</div>
+        </div>
+      </div>
+
+      <div class="tip-card" onclick="toggle(this)">
+        <div class="tip-header">
+          <div class="tip-num">08</div>
+          <div class="tip-title">Uyku Öncesinde Ekran Kullanmayın</div>
+          <div class="tip-arrow">▼</div>
+        </div>
+        <div class="tip-body">
+          <div class="tip-content">Uyku öncesinde ekran kullanımı uykuya geçişi ve uyku kalitesini olumsuz etkilemektedir. Bu nedenle uykudan en az bir saat önce tüm ekranları kapatın. Bu zamanı masal okumak, sakinleştirici müzik dinlemek gibi rahatlatıcı etkinliklerle değerlendirebilirsiniz.</div>
+        </div>
+      </div>
+
+      <div class="tip-card" onclick="toggle(this)">
+        <div class="tip-header">
+          <div class="tip-num">09</div>
+          <div class="tip-title">Aktivitelere Geçişi Kolaylaştırın</div>
+          <div class="tip-arrow">▼</div>
+        </div>
+        <div class="tip-body">
+          <div class="tip-content">"Videonun bitmesine az kaldı. Sonra birlikte kurabiye yapacağız." gibi cümleler, ekran kapatıldığında yaşanan direnç ve krizleri azaltır.</div>
+        </div>
+      </div>
+
+      <div class="tip-card" onclick="toggle(this)">
+        <div class="tip-header">
+          <div class="tip-num">10</div>
+          <div class="tip-title">Güvenlik Önlemlerine Dikkat Edin</div>
+          <div class="tip-arrow">▼</div>
+        </div>
+        <div class="tip-body">
+          <div class="tip-content">Güvenli kullanım, süre kontrolü kadar önemlidir. Telefonunuza ya da tabletinize şifre koymak, internet filtreleri kullanmak ve ebeveyn denetim araçlarından yararlanmak çocuğunuzu uygunsuz içeriklerden korunmasına yardımcı olur.</div>
+        </div>
+      </div>
+
+      <div class="tip-card" onclick="toggle(this)">
+        <div class="tip-header">
+          <div class="tip-num">11</div>
+          <div class="tip-title">Çocuğunuzun Mahremiyetini Koruyun</div>
+          <div class="tip-arrow">▼</div>
+        </div>
+        <div class="tip-body">
+          <div class="tip-content">Kendi paylaşımlarınızda çocuğunuzun mahremiyetini koruyun. Okul öncesi dönemde çocuklar dijital riskleri fark edemezler. Bu nedenle fotoğraf veya video paylaşırken çocuğunuzun özel alanını ve güvenliğini gözetmeniz önemlidir.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PEGI -->
+  <section>
+    <h2 class="section-title">İçeriklerin Uygunluğu</h2>
+    <div class="pegi-box">
+      <h3>PEGI Değerleri Nedir?</h3>
+      <p>Avrupa Oyun Bilgi Sistemi olan <strong>PEGI</strong> (Pan European Game Information) oyunları yaşa ve içeriğe göre sınıflandırmaktadır. Çocuğunuz için uygulama seçerken bilinçli kararlar vermeniz için beş farklı yaş grubu ve sekiz farklı içerik derecelendirmesi bulunmaktadır.</p>
+      <p>PEGI değerleri çocuğun motor becerilerine ya da yaşına göre değil oyunun içeriğinin çocuğunuzun yaş grubunun zihinsel gelişimine etkisi olup olmayacağına yönelik olarak belirlenmiştir.</p>
+      <p><span class="pegi-tag">PEGI 3</span> değeri tüm yaş grupları için uygun kabul edilmektedir. Korkutacak herhangi bir ses veya görsel içermez; bu sebeple okul öncesi çocuklar için uygun olduğu bilinmektedir.</p>
+    </div>
+  </section>
+
+  <!-- İÇERİK DEĞERLENDİRMELERİ -->
+  <section>
+    <h2 class="section-title">İçerik Değerlendirmeleri</h2>
+
+    <!-- Section illustration -->
+    <svg class="section-illu" viewBox="0 0 240 130" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="120" cy="115" rx="100" ry="8" fill="#BFA9E0" opacity="0.4"/>
+      <!-- TV -->
+      <rect x="60" y="30" width="120" height="70" rx="8" fill="#3D2E2E"/>
+      <rect x="68" y="38" width="104" height="54" rx="3" fill="#FFE9A8"/>
+      <!-- Stars on screen -->
+      <text x="90" y="62" font-size="14" fill="#FF8C66">★</text>
+      <text x="115" y="68" font-size="18" fill="#9BCEAE">♥</text>
+      <text x="140" y="60" font-size="14" fill="#BFA9E0">✦</text>
+      <!-- TV stand -->
+      <rect x="110" y="100" width="20" height="10" fill="#5C3A21"/>
+      <rect x="95" y="108" width="50" height="4" rx="2" fill="#5C3A21"/>
+    </svg>
+
+    <div class="content-grid">
+
+      <div class="content-card" onclick="toggle(this)">
+        <div class="content-header">
+          <div class="content-emblem">B</div>
+          <div class="content-title">Bluey ve Bingo</div>
+          <div class="content-arrow">▼</div>
+        </div>
+        <div class="content-body">
+          <div class="content-text">
+            Çocuk gelişimi uzmanları tarafından son yılların en nitelikli animasyonu olarak geniş çapta kabul görmektedir. Ebeveyn-çocuk oyun etkileşimini gerçekçi, sıcak ve bazen yorucu yönleriyle birlikte göstermesi hem çocuğun hem de ebeveynin kendini içerikte görmesini sağlar. Hayal oyunu, duygu düzenleme, hayal kırıklığına tolerans ve farklı bakış açılarını anlama gibi gelişimsel kazanımlar her bölüme ustaca örülmüştür. Baba karakterinin aktif, şefkatli ve eğlenceli ebeveyn figürü olarak çizilmesi de başlı başına değerli bir modeldir.
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card" onclick="toggle(this)">
+        <div class="content-header">
+          <div class="content-emblem">P</div>
+          <div class="content-title">Pocoyo</div>
+          <div class="content-arrow">▼</div>
+        </div>
+        <div class="content-body">
+          <div class="content-text">
+            Uzman danışmanlığında üretilmiş nadir içeriklerden biridir. Anlatıcının sesini merkeze alan yapısı çocukların dili aktif biçimde işlemelerine ve sözel akıl yürütme becerilerini geliştirmelerine yardımcı olur. Görsel sadelik dikkat dağıtıcı öğeleri minimize eder; tek bir merkezi karakter ve az sayıda nesne içermesi bu dönemin sınırlı dikkat kapasitesine bilinçli biçimde uyarlanmıştır. Her bölümde işlenen basit sosyal senaryolar ahlaki gelişim ve duygu düzenleme becerileriyle doğrudan ilişkilidir.
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card" onclick="toggle(this)">
+        <div class="content-header">
+          <div class="content-emblem">M</div>
+          <div class="content-title">Maysa ve Bulut</div>
+          <div class="content-arrow">▼</div>
+        </div>
+        <div class="content-body">
+          <div class="content-text">
+            Hayal gücü ile gerçeklik arasındaki akıcı geçiş bu dönemdeki sembolik oyun ve fantezi düşüncesinin tam karşılığıdır. Karakterin günlük deneyimlerini merkeze alması çocukların içerikle özdeşleşmesini kolaylaştırır ve duygusal temsil becerilerini besler. Görsel dil sade ve sakindir; ani geçişler, yüksek ses efektleri ve aşırı uyarıcı öğeler içermediğinden sinir sistemi açısından uygundur. Bölümlerdeki küçük ölçekli problemler ve çözüm süreçleri çocukların günlük yaşam becerilerini zihinsel olarak prova etmelerine imkân tanır.
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card" onclick="toggle(this)">
+        <div class="content-header">
+          <div class="content-emblem">P</div>
+          <div class="content-title">Paw Patrol</div>
+          <div class="content-arrow">▼</div>
+        </div>
+        <div class="content-body">
+          <div class="content-text">
+            Her bölümde farklı bir problem çözme senaryosu sunulduğundan sebep-sonuç ilişkisi kurma becerisi desteklenir. Ekip çalışması, yardımlaşma ve sorumluluk alma temaları bu dönemin prososyal gelişim kazanımlarıyla örtüşmektedir. Her köpeğin farklı bir uzmanlık alanına sahip olması çocuklara "herkesin farklı bir güçlü yanı vardır" mesajını örtük biçimde verir; bu da benlik saygısının şekillendiği bu dönem için değerlidir. Bölüm sürelerinin kısa ve yapının tekrarlı olması bu yaş grubunun dikkat süresine ve öngörülebilirlik ihtiyacına uygundur.
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card" onclick="toggle(this)">
+        <div class="content-header">
+          <div class="content-emblem">N</div>
+          <div class="content-title">Niloya</div>
+          <div class="content-arrow">▼</div>
+        </div>
+        <div class="content-body">
+          <div class="content-text">
+            Ana karakterin meraklı, girişken ve empati kurabilen bir kız çocuğu olarak çizilmesi öz-yeterlilik algısı açısından olumlu bir model sunar. Aile, komşuluk ve dostluk temaları çocukların sosyal ilişkiler dünyasını anlamlandırmasına katkı sağlar. Görsel dil sade, anlatım hızı bu yaş grubuna uygun; şiddet veya korku içeren öğeler minimumdur.
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card" onclick="toggle(this)">
+        <div class="content-header">
+          <div class="content-emblem">K</div>
+          <div class="content-title">Kukuli</div>
+          <div class="content-arrow">▼</div>
+        </div>
+        <div class="content-body">
+          <div class="content-text">
+            Renkler, sayılar, hayvanlar ve günlük kavramlar gibi bilişsel gelişim hedefleri açık ve sistematik biçimde ele alınmaktadır. Şarkı ve ritim kullanımı hem dil gelişimini hem de hafıza becerilerini destekler; tekrarlı yapı bu yaş grubunun öngörülebilirlik ihtiyacına uygundur. Karakterlerin meraklı, nazik ve paylaşımcı davranış örüntüleri sergilemesi prososyal gelişim için olumlu bir model sunar.
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card" onclick="toggle(this)">
+        <div class="content-header">
+          <div class="content-emblem">P</div>
+          <div class="content-title">Pijamaskeliler</div>
+          <div class="content-arrow">▼</div>
+        </div>
+        <div class="content-body">
+          <div class="content-text">
+            Üç farklı karakterin kendine özgü güç ve kişilik özelliklerine sahip olması çocukların hem bireysel kimlik hem de takım dinamikleri üzerine düşünmesine katkı sağlar. Gece teması ve kötü karakterlerin varlığı 3 yaş altı ya da kaygı eğilimi olan çocuklarda uyku düzeni üzerinde olumsuz etki yaratabilir. Bölümlerde sergilenen çatışma çözüm biçimleri zaman zaman fiziksel karşı koyma üzerine kuruludur; 4–6 yaş aralığı için daha uygun olduğu söylenebilir.
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card" onclick="toggle(this)">
+        <div class="content-header">
+          <div class="content-emblem">K</div>
+          <div class="content-title">Kral Şakir</div>
+          <div class="content-arrow">▼</div>
+        </div>
+        <div class="content-body">
+          <div class="content-text">
+            Yerli yapım olması kültürel bağ ve dil gelişimi açısından olumlu bir özelliktir. Ancak bazı bölümlerde kaba mizah, küçümseyici diyaloglar ve çözüme kavuşturulmayan çatışma sahneleri yer almaktadır; bu durum bu yaş grubunun iletişim örüntülerini model alma eğilimiyle birleşince taklit riski doğurabilir. 4–6 yaş için ebeveyn eşliğinde izlenmesi daha uygun olacaktır.
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card" onclick="toggle(this)">
+        <div class="content-header">
+          <div class="content-emblem">S</div>
+          <div class="content-title">Sese Gel Çocuk / Oyuncu Aile</div>
+          <div class="content-arrow">▼</div>
+        </div>
+        <div class="content-body">
+          <div class="content-text">
+            Müzik ve ritim bu yaş grubunun dil edinimi, hafıza, dikkat süresi ve duygusal düzenleme üzerinde güçlü olumlu etkiler yaratmaktadır. Hareketli şarkılar bedensel farkındalık ve koordinasyon gelişimini de destekler. İçeriklerin yalnızca şarkı formatında olması pasif izlemeyi minimize edip katılımcı bir deneyim sunar. İçerikler içerisinde çok farklı platformlardan oyunlar oynandığı dikkate alınmalıdır.
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card" onclick="toggle(this)">
+        <div class="content-header">
+          <div class="content-emblem">M</div>
+          <div class="content-title">Maşa ile Koca Ayı</div>
+          <div class="content-arrow">▼</div>
+        </div>
+        <div class="content-body">
+          <div class="content-text">
+            Maşa karakteri serinin tamamında kuralsız, sınır tanımaz, sürekli kaos yaratan ve bunun karşılığında cezalandırılmayan bir figür olarak kurgulanmıştır; bu durum çocukların söz konusu davranışları kabul edilebilir, hatta eğlenceli olarak içselleştirmesi riskini doğurur. Nitekim bazı Avrupa ülkelerinde bu içerik ebeveyn şikâyetleri gerekçesiyle yayın platformlarında işaretlenmiştir. Koca Ayı'nın her şeye katlanan, sınır koyamayan figürü de işlevsel bir yetişkin modeli sunmamaktadır.
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card" onclick="toggle(this)">
+        <div class="content-header">
+          <div class="content-emblem">U</div>
+          <div class="content-title">Uğur Böceği ve Kara Kedi</div>
+          <div class="content-arrow">▼</div>
+        </div>
+        <div class="content-body">
+          <div class="content-text">
+            Yapısal olarak okul öncesi değil ilkokul çağı için tasarlanmış bir içeriktir. Bu yaş döneminde çocuklar gerçek ile kurguyu henüz yeterince ayırt edemediğinden sürekli tehlike, kötü karakter saldırıları ve çatışma yoğunluğu kaygı ve uyku sorunlarını tetikleyebilir. Romantik gerilim içeren alt hikâyeler bu yaş grubunun bilişsel hazırbulunuşluğunun oldukça üzerindedir ve erken yaşta ilişki şemalarının oluşumuna dair soru işaretleri doğurur.
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card" onclick="toggle(this)">
+        <div class="content-header">
+          <div class="content-emblem">G</div>
+          <div class="content-title">Grizzy ve Lemingler</div>
+          <div class="content-arrow">▼</div>
+        </div>
+        <div class="content-body">
+          <div class="content-text">
+            Serinin neredeyse tamamı rekabet, sabotaj ve karşılıklı zarar verme eylemleri üzerine kuruludur; bu yapı prososyal davranışlar yerine çatışmayı eğlenceli gösteren bir model sunar. Diyalogsuz format dil gelişimine herhangi bir katkı sunmaz. Sürekli yüksek tempo, ani geçişler ve uyarıcı yoğunluğu bu yaş grubunun sinir sistemi için dengesiz bir uyarılma düzeyi yaratabilir. Problemlerin hiçbirinin yapıcı biçimde çözülmemesi neden-sonuç ve adalet algısı gelişmekte olan çocuklar için kafa karıştırıcı olabilir.
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card" onclick="toggle(this)">
+        <div class="content-header">
+          <div class="content-emblem">Y</div>
+          <div class="content-title">YouTube Shorts</div>
+          <div class="content-arrow">▼</div>
+        </div>
+        <div class="content-body">
+          <div class="content-text">
+            60 saniye altındaki videoların sürekli değişmesi bu yaş grubunda zaten gelişmekte olan dikkat süresini aktif biçimde kısaltmakta ve beynin dopaminerjik ödül döngüsünü olumsuz yönde koşullandırmaktadır. İçerik algoritması çocuktan bağımsız çalışır; bilgi, değer veya güvenlik filtresi uygulamaz. Yavaş tempolu, anlamlı hikâye anlatısına alışması gereken bu dönemde Shorts formatına maruz kalma uzun vadede derin odaklanma ve sabrın gelişimini ciddi biçimde engelleyebilir.
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card" onclick="toggle(this)">
+        <div class="content-header">
+          <div class="content-emblem">K</div>
+          <div class="content-title">Konuşan Kediler</div>
+          <div class="content-arrow">▼</div>
+        </div>
+        <div class="content-body">
+          <div class="content-text">
+            Karakterlerin kullanıcıyı taklit etmesi ve sürekli etkileşim döngüsü yaratması bu yaştaki çocuklarda ekrana karşı anormal bir bağlanma ve sınır belirsizliği oluşturabilir. Gerçek ile kurgunun ayrımını henüz kuramayan bu yaş grubunda hayvan davranışları hakkında hatalı zihinsel şemalar oluşturabilir. Ayrıca içeriklerde argo kelimeler de yer almaktadır. Gerçek bir anlatı yapısı veya gelişimsel hedef içermemektedir.
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card" onclick="toggle(this)">
+        <div class="content-header">
+          <div class="content-emblem">F</div>
+          <div class="content-title">Fındık Ailesi</div>
+          <div class="content-arrow">▼</div>
+        </div>
+        <div class="content-body">
+          <div class="content-text">
+            Gerçek bir ailenin kurgusal ve idealleştirilmiş yaşam biçimini "normalmiş gibi" sunması çocukta kendi ailesiyle karşılaştırma ve yetersizlik algısı doğurabilir. Gelişimsel bir çerçeveye sahip olmadığından bilişsel, duygusal veya sosyal hiçbir kazanım sunmaz. YouTube algoritmasının bu tür kanalları otomatik olarak birbirine bağlaması denetimsiz kalındığında çok farklı içeriklere yönlendirme riskini beraberinde getirir.
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card" onclick="toggle(this)">
+        <div class="content-header">
+          <div class="content-emblem">D</div>
+          <div class="content-title">Dila Kent</div>
+          <div class="content-arrow">▼</div>
+        </div>
+        <div class="content-body">
+          <div class="content-text">
+            Alışveriş, makyaj ve yaşam tarzı odaklı içerikler tüketim normlarını, görünüm odaklı değerleri ve gerçekçi olmayan yaşam standartlarını bu dönemin henüz yapılanmakta olan değer sistemine erken yaşta enjekte etme riski taşımaktadır. Çocuğun bu tür yetişkin içerik üreticileriyle kurduğu hayranlık ilişkisi bakım veren figürlerle kurulması gereken duygusal bağın yönünü değiştirebilir.
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card" onclick="toggle(this)">
+        <div class="content-header">
+          <div class="content-emblem">R</div>
+          <div class="content-title">Roblox</div>
+          <div class="content-arrow">▼</div>
+        </div>
+        <div class="content-body">
+          <div class="content-text">
+            Platform farklı kullanıcıların ürettiği binlerce oyun içermektedir ve içerik denetimi son derece yetersizdir; şiddet, korku ve yaşa uygunsuz temalara kolayca erişilebilmektedir. Çevrimiçi sohbet özelliği yabancılarla iletişimi mümkün kıldığından çocuk güvenliği açısından ciddi risk oluşturmaktadır. Oyunların büyük çoğunluğu mikro ödeme sistemleriyle tasarlanmış olup bu yaş grubunun henüz kavrayamadığı bir para-değer ilişkisini normalleştirmektedir. Motor kontrol gereksinimleri ve soyut oyun mantığı bilişsel hazırbulunuşluğun çok üzerindedir.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>Hazırlayan <strong>Fatih Selek</strong> · Ali Işıkhan Anaokulu</p>
+    <p style="margin-top: 8px;">Çocukların güvenli dijital deneyimleri için <span class="heart">♥</span></p>
+  </footer>
+
+</div>
+
+<script>
+  function toggle(el) {
+    el.classList.toggle('open');
+  }
+</script>
+
+</body>
+</html>
